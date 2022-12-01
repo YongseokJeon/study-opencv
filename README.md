@@ -1,4 +1,4 @@
-# study-opencv
+# Study OpenCV
 
 - Target version: 4.6.0
 - Target platform: macOS
