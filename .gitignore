@@ -2,5 +2,9 @@
 **/build
 **/out
 
+# Externals
+externals/install
+externals/out
+
 # VSCode
 .vscode/
