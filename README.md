@@ -9,3 +9,6 @@
 
 # Progress
 
+- 기본 빌드 테스트
+
+# TODO

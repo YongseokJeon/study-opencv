@@ -56,10 +56,23 @@ ffmpeg 관련 빌드 이슈
 
 해결 방법이 나와있는데, 이를 적용한 브랜치를 사용하려면 포크가 필요해보임
 
+### Error #3
+
+예제 빌드 시 OpenEXR 오류
+
+필요 없을 것 같으니 configure 단계에서 꺼주고 빌드하도록 함
+
+## 포기한 것
+
+cmake 안에서 빌드해서 모든 걸 다 하고 싶었지만... configure 관련해서 쉽지 않은 것으로 보임
+
+나중에는 pre-built library 로 사용하면 어떨까?
+
 # Command
 
 ``` 
-cmake -Bout -DCMAKE_BUILD_TYPE=Debug -DOPENCV_EXTRA_MODULES_PATH=${CMAKE_CURRENT_SOURCE_DIR}/opencv_contrib/modules/dnn_superres -DBUILD_ZLIB=OFF -DBUILD_SHARED_LIBS=OFF -DBUILD_TESTS=OFF -DBUILD_DOCS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_opencv_gapi=OFF -DCMAKE_CXX_STANDARD=14 -DCMAKE_INSTALL_PREFIX=install opencv
+cmake -Bout -DCMAKE_BUILD_TYPE=Debug -DOPENCV_EXTRA_MODULES_PATH=opencv_contrib/modules/dnn_superres -DBUILD_ZLIB=OFF -DBUILD_OPENEXR=OFF -DBUILD_SHARED_LIBS=OFF -DBUILD_TESTS=OFF -DBUILD_DOCS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_opencv_gapi=OFF -DCMAKE_CXX_STANDARD=14 -DCMAKE_INSTALL_PREFIX=install opencv
+cmake -Bout -DCMAKE_BUILD_TYPE=Debug -DOPENCV_EXTRA_MODULES_PATH=opencv_contrib/modules/dnn_superres -DBUILD_ZLIB=OFF -DWITH_OPENEXR=OFF -DBUILD_SHARED_LIBS=OFF -DBUILD_TESTS=OFF -DBUILD_DOCS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_opencv_gapi=OFF -DCMAKE_CXX_STANDARD=14 -DCMAKE_INSTALL_PREFIX=install opencv
 ```
 
 # Reference
