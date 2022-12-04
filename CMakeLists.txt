@@ -16,5 +16,6 @@ if (CMAKE_BUILD_TYPE MATCHES Debug)
 endif()
 
 add_subdirectory(src)
+add_subdirectory(resource)
 
 message(NOTICE "*** End ${PROJECT_NAME} configuration")
